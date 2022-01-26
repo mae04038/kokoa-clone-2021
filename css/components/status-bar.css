@@ -1,0 +1,30 @@
+.status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex; /* 3개를 한 줄에 놓기*/
+  justify-content: center; /* flex의 축에 따라 3개 떨어뜨려 놓기*/
+  padding: 5px 3px; /*좌 우*/
+  box-sizing: border-box; /*padding을 줘도 원래box사이즈를 고정*/
+}
+
+.status-bar__column {
+  width: 33%;
+}
+
+.status-bar__column:first-child span {
+  margin-right: 5px; /*NoService와 와이파이 아이콘 사이 공간 만들기*/
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center; /*배터리표시,배터리,번개 아이콘들 배치*/
+}
+.status-bar__column .fa-battery-full {
+  /*배터리 좌우 공간 만들기*/
+  margin: 0px 5px;
+}
